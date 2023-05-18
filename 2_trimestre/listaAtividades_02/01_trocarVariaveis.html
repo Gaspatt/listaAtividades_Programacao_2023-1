@@ -6,10 +6,17 @@
     */
 
     //ENTRADA
-
+    let n1 = Number(prompt('Informe um número:'))
+    let n2 = Number(prompt('Informe um número:'))
+    let nn = n1
     //PROCESSAMENTO
-
+    if (n1 != n2) {
+        n1 = n2
+        n2 = nn
+    } else {
+        alert('Informe números diferentes!')
+    }
     //SAÍDA
+    alert(`Antes: ${nn} e ${n1} \nDepois: ${n1} e ${n2}`)
 
-    
 </script>
