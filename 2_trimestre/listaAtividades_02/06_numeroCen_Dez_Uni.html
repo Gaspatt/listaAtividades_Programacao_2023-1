@@ -11,11 +11,18 @@
     */
 
     //ENTRADA
-
+    const n = prompt('Informe um número menor que 1000:')
 
     //PROCESSAMENTO
-
-    
+    const centenas = n / 100;
+    const dezenas = (n % 100) / 10;
+    const unidades = ((n % 100) % 10)
+    if (centenas > 0 && dezenas > 0 && unidades > 0) {
+        document.write(`${centenas.toFixed(0)} centenas, ${dezenas.toFixed(0)} dezenas, ${unidades.toFixed(0)} unidades`)
+    }
+    else if (dezenas.toFixed(0) > 0 && unidades.toFixed(0) > 0) {
+        document.write(`${dezenas} dezenas, ${unidades} unidades`)
+    }
     //SAÍDA
 
 
