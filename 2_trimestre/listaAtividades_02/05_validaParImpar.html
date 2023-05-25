@@ -6,13 +6,13 @@
 
     //ENTRADA
     let n = prompt("Digite um numero menor que 1000000");
-    let limite = 1000000
+    let resto = n % 2
 
     //PROCESSAMENTO
-    if (n > limite) {
-        alert('Informe um número menor que 1000000')
+    if (n > 1000) {
+        alert('Informe um número menor que 1000')
     }
-    else if (n & 1) {
+    else if (resto > 0) {
         alert("Impar");
     } else {
         alert("Par");

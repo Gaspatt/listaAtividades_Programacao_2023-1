@@ -8,12 +8,29 @@
     */
 
     //ENTRADA
-
+    const sinal = prompt('Informe o sinal para a operação (+, -, /, *):')
+    const valor = Number(prompt('Informe um valor:'))
+    const valor2 = Number(prompt('Informe outro valor:'))
+    let resultado;
+    let dividendo;
+    let divisor;
 
     //PROCESSAMENTO
-
-    
+    if (sinal == "+") {
+        resultado = valor + valor2
+    }
+    else if (sinal == "-") {
+        resultado = valor - valor2
+    }
+    else if (sinal == "*") {
+        resultado = valor * valor2
+    }
+    else if (sinal == "/") {
+        dividendo = Number(prompt('Informe o dividendo:'))
+        divisor = Number(prompt('Informe o divisor:'))
+        resultado = dividendo / divisor
+    }
     //SAÍDA
-
+    alert(resultado)
 
 </script>

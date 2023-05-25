@@ -3,10 +3,22 @@
     // Receba os três lados de um triângulo. Informe se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dica: pesquise sobre a regra para saber se os lados formam um triângulo e também sobre os tipos de triângulos.
 
     //Entrada
-
+    const a = Number(prompt('Informe um valor:'))
+    const b = Number(prompt('Informe outro valor:'))
+    const c = Number(prompt('Informe outro valor:'))
 
     //Processamento
-
+    if (a + b > c && a + c > b && b + c > a) {
+        if (a === b && b === c) {
+            alert("Triângulo equilátero")
+        } else if (a === b || a === c || b === c) {
+            alert("Triângulo isósceles")
+        } else {
+            alert("Triângulo escaleno")
+        }
+    } else {
+        alert("Não é possível formar um triângulo")
+    }
 
     //Saída
 </script>
