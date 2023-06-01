@@ -11,9 +11,45 @@
     */
 
     //ENTRADA
+    const tel = prompt('Você telefonou para a vítima no dia? (Responda com sim ou nao!)').toLowerCase()
+    const local = prompt('Você esteve no local do crime? (Responda com sim ou nao!)').toLowerCase()
+    const mora = prompt('Você mora perto da vítima? (Responda com sim ou nao!)').toLowerCase()
+    const deve = prompt('Você devia para a vítima? (Responda com sim ou nao!)').toLowerCase()
+    const trabalho = prompt('Você trabalhava ou já trabalhou com a vítima? (Responda com sim ou nao!)').toLowerCase()
+    let pontos = 0
+    let classificação
 
     //PROCESSAMENTO
-
+    if (tel == 'sim') {
+        pontos++
+    }
+    if (local == 'sim') {
+        pontos++
+    }
+    if (mora == 'sim') {
+        pontos++
+    }
+    if (deve == 'sim') {
+        pontos++
+    }
+    if (trabalho == 'sim') {
+        pontos++
+    }
+    if (pontos < 2) {
+        classificação = 'Inocente'
+    }
+    else if (pontos == 2) {
+        classificação = 'Suspeita'
+    }
+    else if (pontos >= 3 && pontos <= 4) {
+        classificação = 'Cumplice'
+    }
+    else if (pontos == 5) {
+        classificação = 'Assassino'
+    }
+    else {
+        alert('Responda com sim ou não!')
+    }
     //SAÍDA
-
+    alert(pontos, classificação)
 </script>
