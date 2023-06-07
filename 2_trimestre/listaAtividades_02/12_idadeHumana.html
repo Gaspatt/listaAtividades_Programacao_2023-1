@@ -6,12 +6,26 @@
     // - cães de porte médio: fator 6
     // - cães grandes: fator 7.
 
-    // Entrada
+    const cao = prompt("Seu cachorro é de que porte? Responda (P) para pequeno, (M) para médio e (G) para grande:").toLocaleUpperCase().trim();
 
-    
-    // Processamento
+    if (cao === "P" || cao == "M" || cao === "G") {
+        var idade = Number(prompt("Quantos anos de vida tem seu cachorro?").trim());
 
-    
-    // Saída
+        if (cao == "P") {
+            var idade = idade * 5;
+        }
+
+        else if (cao == "M") {
+            var idade = idade * 6;
+        }
+
+        else if (cao == "G") {
+            var idade = idade * 7;
+        }
+
+        document.write(`A idade dele é ${idade}`);
+    } else {
+        document.write("Por acaso seu cachorro é um alien?!");
+    }
 
 </script>
