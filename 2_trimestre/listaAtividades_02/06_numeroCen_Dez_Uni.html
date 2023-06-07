@@ -14,32 +14,38 @@
     let n = Number(prompt(`Informe um número inteiro menor que 1000`).trim())
 
     //PROCESSAMENTO
+    if (numero > 0 && numero < 1000) {
+        const centenas = Math.floor(numero % 100 / 10)
+        const dezenas = Math.floor(numero % 100 / 10)
+        const unidades = numero % 10
+        let mensagemFinal = ""
+        if (centenas > 1) {
+            mensagemFinal = mensagemFinal + "s"
+        }
+        if (dezenas > 0 && unidades > 0) {
+            mensagemFinal = mensagemFinal + ", "
+        }
+        else if (dezenas > 0 || unidades > 0) {
+            mensagemFinal = mensagemFinal + " e "
+        }
+    }
+    if (dezenas > 0) {
+        mensagemFinal = mensagemFinal + `${dezenas} Dezena`
+        if (dezenas > 1) {
+            mensagemFinal = mensagemFinal + "s"
+        }
+        if (unidade > 0) {
+            mensagemFinal = mensagemFinal + " e "
+        }
+    }
+    if (unidades > 0) {
+        mensagemFinal = mensagemFinal + `${unidades} Unidade`
+        if (unidades > 1) {
+            mensagemFinal = mensagemFinal + "s"
+        }
+    }
+    alert(mensagemFinal)
 
-    let mensagemFinal = "O número tem: <br>";
-    let cem = 0;
-    let dez = 0;
-
-    if (n > 0 && n < 1000) {
-        cem = Math.floor(n / 100);
-        n = n % 100;
-        dez = Math.floor(n / 10);
-        n = n % 10;
-    }
-    else {
-        document.write(`Valor inválido`);
-    }
-
-    if (cem > 0) {
-        mensagemFinal = mensagemFinal + cem + " centenas; <br>"
-    }
-    if (dez > 0) {
-        mensagemFinal = mensagemFinal + dez + " dezenas; <br> "
-    }
-    if (n > 0) {
-        mensagemFinal = mensagemFinal + n + " unidades. "
-    }
-
-    document.write(mensagemFinal)
     //SAÍDA
 
 
