@@ -7,11 +7,16 @@
       O acréscimo é de 1/4 da diferença das notas, se for positivo. */
 
     // entrada
-
+    const notaLBants = Number(prompt("Informe a nota do Little Brother antes da ajuda do Big Brother").trim().replace(",","."));
+    const notaLBdps = Number(prompt("Informe a nota do Little Brother depois de receber a ajuda Big Brother").trim().replace(",","."));
     
     // processamento
-
-    
-    // saída
+    if (notaLBants > notaLBdps) {
+        alert(`Little Brother não conseguiu recuperar a nota e ficou com ${notaLBants.toFixed(1).replace(".",",")} :(`);
+    } else {
+       const notaBBants = Number(prompt("Informe a nota do Big Brother antes de ajudar o Little Brother").trim().replace(",","."));
+       notaBBdps = notaBBants + ((notaLBdps - notaLBants)*0.25);
+        alert(`Little Brother conseguiu aumentar sua nota e ficou com ${notaLBdps.toFixed(1).replace(".",",")}, e Big Brother aumentou a nota por ajudar ele, logo ficou com ${notaBBdps.toFixed(1).replace(".",",")}`)
+    }
 
 </script>
